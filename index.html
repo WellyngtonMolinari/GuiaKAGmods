@@ -31,40 +31,97 @@
 
         <!-- Espaço para a imagem -->
         <div class="image-container">
-            <img src="imagens/king-arthurs-gold.jpg" alt="Imagem de King Arthur's Gold">
+            <img src="imagens/main.png" alt="Imagem de King Arthur's Gold">
         </div>
 
         <h2 id="mod-intro">1. Introdução ao Mod</h2>
-        <p>Neste guia, vamos aprender como criar um mod básico para o jogo <strong>King Arthur's Gold</strong>, chamado <em>"Cavaleiro Sanguinário"</em>. Este mod ajustará os tempos de ataque da classe cavaleiro, tornando-a mais ágil e feroz.</p>
+        <p>Neste guia, vamos aprender como criar um mod básico para o jogo <strong>King Arthur's Gold</strong>, chamado <em>"Cavaleiro Sanguinário"</em>. Este mod ajustará os tempos de ataque da classe cavaleiro, tornando-a mais ágil e feroz.
+            Além disso iremos adicionar o efeito vermelho no slash do sprite do cavaleiro!
+        Primeiramente você precisa de um editor de código, eu estarei usando neste guia o <a href="https://code.visualstudio.com/download"> Visual Studio Code</a> para modificar os scripts do jogo.Se quiser, pode
+        baixar o arquivo completo do Mod <strong><a href="https://github.com/WellyngtonMolinari/CavaleiroSanguinario">aqui!</a></li></strong><br>
+        Lembre-se de que por padrão, o jogo vai carregar todos os arquivos originais que estão na pasta "Base", a não ser que eles forem modificados e colocados na pasta "Mods" (que é o que iremos fazer neste guia).</p> 
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Jem3p6YzqfE?si=72AgR57n6euFabnq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
         <h2 id="mod-localizacao">2. Localizar Arquivos do Jogo</h2>
-        <p>O primeiro passo é localizar os arquivos responsáveis pela lógica do cavaleiro no jogo:</p>
+        <p>Localize os arquivos responsáveis pela lógica do cavaleiro no jogo:</p>
         <ul>
-            <li>Abra a pasta de instalação do <strong>King Arthur's Gold</strong>.</li>
-            <li>Navegue até a pasta onde estão os scripts do jogo.</li>
-            <li>Encontre o arquivo específico que controla os scripts da classe cavaleiro, geralmente nomeado algo como <code>knight.as</code>.</li>
-            <li>Anote o endereço completo da pasta e o copie o arquivo completo.</li>
+            <li>Abra a pasta raiz de instalação do <strong>King Arthur's Gold</strong>.<br> Geralmente em <i>"C:\SteamLibrary\steamapps\common\King Arthur's Gold"</i></li>
+            <!-- Espaço para a imagem -->
+        <div class="image">
+            <img src="imagens/print.png" alt="Imagem de King Arthur's Gold">
+        </div>
+        
+        <li>Navegue até a pasta "Base", onde estão os scripts do jogo.<br></li>
+        <i>"C:\SteamLibrary\steamapps\common\King Arthur's Gold\Base"</i>
+        <!-- Espaço para a imagem -->
+        <div class="image">
+            <img src="imagens/print1.png" alt="Imagem de King Arthur's Gold">
+        </div>
+
+            <li>Encontre o arquivo específico que controla os scripts da classe cavaleiro, que é <strong>"KnightCommon.as"<br></strong>
+                <i>"C:\SteamLibrary\steamapps\common\King Arthur's Gold\Base\Entities\Characters\Knight"</i></li>
+                <!-- Espaço para a imagem -->
+                <div class="image">
+                    <img src="imagens/print2.png" alt="Imagem de King Arthur's Gold">
+                </div>
+            <li>Anote o endereço completo da pasta e <strong>copie o arquivo "KnightCommon.as".</strong></li>
         </ul>
 
         <h2 id="mod-modificacoes">3. Fazer Modificações</h2>
         <p>Agora que sabemos onde estão os arquivos, vamos começar a fazer as modificações necessárias:</p>
         <ul>
             <li>Volte à pasta raiz do jogo.</li>
-            <li>Crie uma nova pasta para o seu mod dentro da pasta "Mods", nomeie-a como <code>CavaleiroSanguinario</code>.</li>
-            <li>Copie o arquivo <code>knight.as</code> para a pasta do mod, mantendo o mesmo nome e estrutura de diretório.</li>
+                <!-- Espaço para a imagem -->
+        <div class="image">
+            <img src="imagens/print.png" alt="Imagem de King Arthur's Gold">
+        </div>
+        
+            <li>Crie uma nova pasta para o seu mod dentro da pasta "Mods", nomeie-a como <strong>"CavaleiroSanguinario"</strong>.</li>
+            <div class="image">
+                <img src="imagens/print3.png" alt="Imagem de King Arthur's Gold">
+            </div>
+            <li>Agora crie mais pastas, nessa ordem, uma dentro da outra: "Entities", "Characters", e "Knight".
+                Cole o arquivo <strong>"KnightCommon.as"</strong> dentro dessa última pasta, mantendo o mesmo nome e estrutura de diretórios. Dessa forma:
+            <i>"\Mods\CavaleiroSanguinario\Entities\Characters\Knight"</i></li>
+            <div class="image">
+                <img src="imagens/print4.png" alt="Imagem de King Arthur's Gold">
+            </div>
             <li>Abra o arquivo copiado e estude a lógica do script.</li>
-            <li>Procure pela variável que controla o tempo entre os ataques do cavaleiro e faça as modificações desejadas para ajustá-la.</li>
+            <div class="image">
+                <img src="imagens/print5.png" alt="Imagem de King Arthur's Gold">
+            </div>
+            <li>Procure pela variável que controla o tempo entre os ataques do cavaleiro e faça as modificações desejadas para ajustá-la. Mas tome cuidado, 
+                pois você pode quebrar o script e o jogo não vai funcionar!
+            </li>
+            <div class="image">
+                <img src="imagens/print6.png" alt="Imagem de King Arthur's Gold">
+            </div>
             <li>Salve as alterações no arquivo.</li>
+            <li>Você também pode modificar o sprite do cavaleiro e adicionar efeitos no slash dele, seguindo essa mesma lógica
+                de modificação de arquivos usada até aqui.
+            </li>
         </ul>
 
         <h2 id="mod-testar">4. Testar o Mod</h2>
         <p>Com as modificações feitas, é hora de testar o nosso mod:</p>
         <ul>
             <li>Volte à pasta raiz do jogo.</li>
-            <li>Encontre o arquivo <code>mods.cfg</code>.</li>
-            <li>Adicione o nome da pasta do mod <code>CavaleiroSanguinario</code> na primeira linha deste arquivo e salve-o.</li>
-            <li>Execute o jogo usando o arquivo <code>runlocalhost</code> para iniciar com o mod carregado.</li>
-            <li>Teste o jogo e observe as mudanças no comportamento do cavaleiro.</li>
+            <li>Encontre o arquivo <strong>mods.cfg</strong>.</li>
+            <div class="image">
+                <img src="imagens/print7.png" alt="Imagem de King Arthur's Gold">
+            </div>
+            <li>Adicione o nome da pasta do mod <strong>"CavaleiroSanguinario"</strong> na primeira linha após os comentários deste arquivo e salve-o.</li>
+            <div class="image">
+                <img src="imagens/print8.png" alt="Imagem de King Arthur's Gold">
+            </div>
+            <li>Execute o jogo usando o arquivo <strong>runlocalhost</strong> para iniciar com o mod carregado.</li>
+            <div class="image">
+                <img src="imagens/print9.png" alt="Imagem de King Arthur's Gold">
+            </div>
+            <li>Parabéns, você terminou seu primeiro mod!</li>
+            <li>Teste o jogo e observe as mudanças no comportamento do cavaleiro.</li><br>
+            <li><strong><a href="https://github.com/WellyngtonMolinari/CavaleiroSanguinario">Download do mod completo</a></li></strong>
         </ul>
 
         <a href="index.html">← Voltar para a página principal</a>
